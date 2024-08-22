@@ -72,20 +72,33 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			addFavoriteCharacters: async (id, name) => {
 				const { charactersfavorite } = getStore()
-				setStore({ charactersfavorite: [...charactersfavorite, { id, name }] })
-			},
-
-
-			addFavoritePlanets: async (id, name) => {
+				const existingIndex = charactersfavorite.findIndex((item) => item.id === id)
+				if (existingIndex === -1) {
+				  setStore({ charactersfavorite: [...charactersfavorite, { id, name }] })
+				} else {
+				  setStore({ charactersfavorite: charactersfavorite.filter((item) => item.id !== id) })
+				}
+			  },
+			  
+			  addFavoritePlanets: async (id, name) => {
 				const { planetsfavorite } = getStore()
-				setStore({planetsfavorite: [...planetsfavorite, { id, name }] })
-			},
-
-
-			addFavoriteVehicles: async (id, name) => {
+				const existingIndex = planetsfavorite.findIndex((item) => item.id === id)
+				if (existingIndex === -1) {
+				  setStore({ planetsfavorite: [...planetsfavorite, { id, name }] })
+				} else {
+				  setStore({ planetsfavorite: planetsfavorite.filter((item) => item.id !== id) })
+				}
+			  },
+			  
+			  addFavoriteVehicles: async (id, name) => {
 				const { vehiclesfavorite } = getStore()
-				setStore({ vehiclesfavorite: [...vehiclesfavorite, { id, name }] })
-			},
+				const existingIndex = vehiclesfavorite.findIndex((item) => item.id === id)
+				if (existingIndex === -1) {
+				  setStore({ vehiclesfavorite: [...vehiclesfavorite, { id, name }] })
+				} else {
+				  setStore({ vehiclesfavorite: vehiclesfavorite.filter((item) => item.id !== id) })
+				}
+			  },
 			
 		
 

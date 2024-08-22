@@ -9,9 +9,11 @@ export const DetailsP = props => {
 
     useEffect(() => {
 
-        actions.getDetailsP(params.uid)
+        actions.getPlanetDetails(params.uid)
 
     }, [])
+
+    const imageUrl = `https://starwars-visualguide.com/assets/img/planets/${params.uid}.jpg`;
 
     return (
 
@@ -23,7 +25,7 @@ export const DetailsP = props => {
 
                 <div className="d-flex ">
                     <div className="col-md-4">
-                        <img src={`https://starwars-visualguide.com/assets/img/planets/4.jpg`} className="img-fluid rounded-start object-fit-cover" alt="..." />
+                        <img src={imageUrl} className="img-fluid rounded-start object-fit-cover" alt="..." onError={(e) => e.target.src = 'fallback-image.jpg'} style={{ marginRight: "20px" }} />
                     </div>
                     <div className="col-md-6">
                         <div className="card-body">
@@ -31,61 +33,75 @@ export const DetailsP = props => {
                             <div className="d-flex">
                                 <ul>
 
-                                    <li className="p-3" ><h6> "climate":
-                                        {store?.planetsdetails?.climate}</h6>
+                                    <li className="p-3" ><h6 style={{ color: "#FFEB1F" }}>"climate":
+                                        <span>{store?.planetsdetails?.climate}</span>
+                                    </h6>
                                     </li>
 
-                                    <li className="p-3"><h6>"created":
-                                        {store?.planetsdetails?.created}</h6>
+                                    <li className="p-3"><h6 style={{ color: "#FFEB1F" }}>"created":
+                                        <span>{store?.planetsdetails?.created}</span>
+                                    </h6>
                                     </li>
 
-                                    <li className="p-3"><h6> "diameter":
-                                        {store?.planetsdetails?.diameter}</h6>
+                                    <li className="p-3"><h6 style={{ color: "#FFEB1F" }}>"diameter":
+                                        <span>{store?.planetsdetails?.diameter}</span>
+                                    </h6>
                                     </li>
 
-                                    <li className="p-3"><h6>   "edited":
-                                        {store?.planetsdetails?.edited}</h6>
+                                    <li className="p-3"><h6 style={{ color: "#FFEB1F" }}>"edited":
+                                        <span>{store?.planetsdetails?.edited}</span>
+                                    </h6>
                                     </li>
 
-                                    <li className="p-3"><h6>   "films":
-                                        {store?.planetsdetails?.films}</h6>
+                                    <li className="p-3"><h6 style={{ color: "#FFEB1F" }}>"films":
+                                        <span>{store?.planetsdetails?.films}</span>
+                                    </h6>
                                     </li>
 
-                                    <li className="p-3"><h6>"gravity":
-                                        {store?.planetsdetails?.gravity}</h6>
+                                    <li className="p-3"><h6 style={{ color: "#FFEB1F" }}>"gravity":
+                                        <span>{store?.planetsdetails?.gravity}</span>
+                                    </h6>
                                     </li>
 
-                                    <li className="p-3"><h6> "name":
-                                        {store?.planetsdetails?.name}</h6>
+                                    <li className="p-3"><h6 style={{ color: "#FFEB1F" }}>"name":
+                                        <span>{store?.planetsdetails?.name}</span>
+                                    </h6>
                                     </li>
 
-                                    <li className="p-2"><h6>   "orbital_period":
-                                        {store?.planetsdetails?.orbital_period}</h6>
+                                    <li className="p-2"><h6 style={{ color: "#FFEB1F" }}>"orbital_period":
+                                        <span>{store?.planetsdetails?.orbital_period}</span>
+                                    </h6>
                                     </li>
                                 </ul>
                                 <ul>
-                                    <li className="p-3"><h6>    "population":
-                                        {store?.planetsdetails?.population}</h6>
+                                    <li className="p-3"><h6 style={{ color: "#FFEB1F" }}>"population":
+                                        <span>{store?.planetsdetails?.population}</span>
+                                    </h6>
                                     </li>
 
-                                    <li className="p-3"><h6>  "residents":
-                                        {store?.planetsdetails?.residents}</h6>
+                                    <li className="p-3"><h6 style={{ color: "#FFEB1F" }}>"residents":
+                                        <span>{store?.planetsdetails?.residents}</span>
+                                    </h6>
                                     </li>
 
-                                    <li className="p-3"><h6>  "rotation_period":
-                                        {store?.planetsdetails?.rotation_period}</h6>
+                                    <li className="p-3"><h6 style={{ color: "#FFEB1F" }}>"rotation_period":
+                                        <span>{store?.planetsdetails?.rotation_period}</span>
+                                    </h6>
                                     </li>
 
-                                    <li className="p-3"><h6> "surface_water":
-                                        {store?.planetsdetails?.surface_water}</h6>
+                                    <li className="p-3"><h6 style={{ color: "#FFEB1F" }}>"surface_water":
+                                        <span>{store?.planetsdetails?.surface_water}</span>
+                                    </h6>
                                     </li>
 
-                                    <li className="p-3"><h6>  "terrain":
-                                        {store?.planetsdetails?.terrain}</h6>
+                                    <li className="p-3"><h6 style={{ color: "#FFEB1F" }}>"terrain":
+                                        <span>{store?.planetsdetails?.terrain}</span>
+                                    </h6>
                                     </li>
 
-                                    <li className="p-3"><h6> "url":
-                                        {store?.planetsdetails?.url}</h6>
+                                    <li className="p-3"><h6 style={{ color: "#FFEB1F" }}>"url":
+                                        <span>{store?.planetsdetails?.url}</span>
+                                    </h6>
                                     </li>
 
                                 </ul>
@@ -96,13 +112,12 @@ export const DetailsP = props => {
             </div>
 
             <Link to="/">
-                <span className="btn btn-warning btn-lg" href="#" role="button">
+                <span className="btn btn-warning btn-lg" role="button">
                     Back home
                 </span>
-            </Link>
+                </Link>
         </div>
 
 
     );
 };
-
