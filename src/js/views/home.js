@@ -18,7 +18,7 @@ export const Home = () => {
 	return(
 		<div className="text-center">
 
-            {/* <div className="d-flex"> */}
+            <div className="d-flex">
                 <div className="characters">
                     <h2>Characters</h2>
                     <div id="carouselCharacters" className="carousel slide rounded-start">
@@ -43,7 +43,7 @@ export const Home = () => {
                                         alt={""}
                                     />
                                     <div className="carousel-caption d-none d-md-block">
-                                        <Link to={`/charactersDetails/${item.uid}`} className="btn-info">
+                                        <Link to={`/DetailsC/${item.uid}`} className="btn-info">
                                             {item.name}
                                         </Link>
                                         <button onClick={() => actions.addFavoriteCharacters(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl"></i></button>
@@ -97,7 +97,7 @@ export const Home = () => {
                                         alt={""}
                                     />
                                     <div className="carousel-caption d-none d-md-block">
-                                        <Link to={`/vehiclesDetails/${item.uid}`} className="btn-info">
+                                        <Link to={`/DetailsV/${item.uid}`} className="btn-info">
                                             {item.name}
                                         </Link>
                                         <button onClick={() => actions.addFavoriteVehicles(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" ></i></button>
@@ -151,7 +151,7 @@ export const Home = () => {
                                         alt={""}
                                     />
                                     <div className="carousel-caption d-none d-md-block">
-                                        <Link to={`/planetsDetails/${item.uid}`} className="btn-info">
+                                        <Link to={`/DetailsP/${item.uid}`} className="btn-info">
                                             {item.name}
                                         </Link>
                                         <button onClick={() => actions.addFavoritePlanets(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" ></i></button>

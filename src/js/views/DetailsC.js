@@ -16,13 +16,14 @@ export const DetailsC = props => {
         <div className="jumbotron mx-5 my-5">
 
 
-            <div className="card mb-3 border border-1  rounded-start  border border-warning-subtle" style={{ width: "1260px", height: "555px", background: "black", color: "#FFEB1F" }}>
+            <div className="card mb-3 border border-1  rounded-start  border border-warning-subtle" 
+            style={{ width: "1260px", height: "555px", background: "black", color: "#FFEB1F" }}>
 
                 <div className="d-flex ">
                     <div className="col-md-4">
                         <img src="https://starwars-visualguide.com/assets/img/characters/1.jpg" className="img-fluid rounded-start object-fit-cover" alt="..." />
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-8">
                         <div className="card-body">
 
                             <div className="d-flex">

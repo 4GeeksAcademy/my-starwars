@@ -41,7 +41,7 @@ export const DetailsV = props => {
 									</li>
 
 									<li className="p-3"><h6> "cost_in_credits":
-										{store?.ivehiclesdetails?.cost_in_credits}</h6>
+										{store?.vehiclesdetails?.cost_in_credits}</h6>
 									</li>
 
 									<li className="p-3"><h6> "created":
