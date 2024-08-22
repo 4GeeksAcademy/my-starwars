@@ -37,7 +37,7 @@ export const Home = () => {
                     src={`https://starwars-visualguide.com/assets/img/characters/${item.uid}.jpg`}
                     className="d-block w-100"
                     alt={item.name}
-                    onError={(e) => (e.target.src = 'fallback-image.jpg')} // Add fallback image
+                    onError={(e) => (e.target.src = 'fallback-image.jpg')} 
                   />
                   <div className="carousel-caption d-none d-md-block">
                     <Link to={`/DetailsC/${item.uid}`} className="btn-info">
@@ -96,7 +96,7 @@ export const Home = () => {
                     src={`https://starwars-visualguide.com/assets/img/vehicles/${item.uid}.jpg`}
                     className="d-block w-100"
                     alt={item.name}
-                    onError={(e) => (e.target.src = 'fallback-image.jpg')} // Add fallback image
+                    onError={(e) => (e.target.src = 'fallback-image.jpg')} 
                   />
                   <div className="carousel-caption d-none d-md-block">
                     <Link to={`/DetailsV/${item.uid}`} className="btn-info">
@@ -155,7 +155,7 @@ export const Home = () => {
                     src={`https://starwars-visualguide.com/assets/img/planets/${item.uid}.jpg`}
                     className="d-block w-100"
                     alt={item.name}
-                    onError={(e) => (e.target.src = 'fallback-image.jpg')} // Add fallback image
+                    onError={(e) => (e.target.src = 'fallback-image.jpg')} 
                   />
                   <div className="carousel-caption d-none d-md-block">
                     <Link to={`/DetailsP/${item.uid}`} className="btn-info">
